@@ -17,7 +17,7 @@ const NotesListPage = () => {
     // get some data 
     let getNotes = async () => {
         // use fetch api to get some data 
-        let response = await fetch('http://localhost:8000/notes/')
+        let response = await fetch('https://my-json-server.typicode.com/cephasosayi/Mynote/notes')
         // we parse the data here 
         let data =await response.json();
         // getting the data, pushing into the empty state 

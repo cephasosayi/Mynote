@@ -33,6 +33,7 @@ getNotes()
         body: JSON.stringify({...note, 'updated': new Date()})
       })
   }
+  
 
   let createNote = async () =>{
     await fetch(`https://my-json-server.typicode.com/cephasosayi/Mynote/notes`, {

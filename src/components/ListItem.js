@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 let getDate = (note) => {
-  return new Date(note.Updated_at).toLocaleDateString()
+  return new Date(note.updated_at).toLocaleDateString()
 }
 let getTitle = (note) =>{
   const title =  note.body.split('\n')[0]

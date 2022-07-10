@@ -54,7 +54,7 @@ getNotes()
 
     } else if( noteId === 'new' && note !== null){
       createNote()
-      history.push('/')
+      
     }
     updateNote()
     history.push('/ ')
@@ -81,7 +81,7 @@ getNotes()
             { noteId !== 'new' ? (
                  <button onClick={handleDelete}>Delete</button>
             ): (
-              <button onClick={handleSubmit}>Done</button>
+             <Link to='/'> <button onClick={handleSubmit}>Done</button> </Link>
 
             ) }
            
@@ -89,7 +89,7 @@ getNotes()
         </div>
         
 
-        <textarea onChange={(e) => {setNotes({...note, 'body': e.target.value})}} value={note?.body}>
+        <textarea placeholder='Your note' onChange={(e) => {setNotes({...note, 'body': e.target.value})}} value={note?.body}>
 
         </textarea>
     </div>

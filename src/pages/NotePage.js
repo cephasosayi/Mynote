@@ -54,6 +54,7 @@ getNotes()
 
     } else if( noteId === 'new' && note !== null){
       createNote()
+      history.push('/')
     }
     updateNote()
     history.push('/ ')

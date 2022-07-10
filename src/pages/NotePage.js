@@ -17,7 +17,7 @@ getNotes()
   let getNotes = async () =>{
     // setting a condition to stop other getNote request if we want to add a new note 
     if (noteId === 'new') return;
-    let response = await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`)
+    let response = await fetch(`https://secure-garden-81676.herokuapp.com/notes/:${noteId}`)
     let data = await response.json()
     setNotes(data)
   }

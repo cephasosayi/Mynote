@@ -89,7 +89,7 @@ getNotes()
         </div>
         
 
-        <textarea placeholder='Your note' onChange={(e) => {setNotes({...note, 'body': e.target.value})}} value={note?.body}>
+        <textarea placeholder='Start typing' onChange={(e) => {setNotes({...note, 'body': e.target.value})}} value={note?.body}>
 
         </textarea>
     </div>

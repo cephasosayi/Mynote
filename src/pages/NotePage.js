@@ -17,7 +17,7 @@ getNotes()
   let getNotes = async () =>{
     // setting a condition to stop other getNote request if we want to add a new note 
     if (noteId === 'new') return;
-    let response = await fetch(`https://secure-garden-81676.herokuapp.com/notes/:${noteId}`)
+    let response = await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`)
     let data = await response.json()
     setNotes(data)
   }
@@ -92,12 +92,7 @@ getNotes()
            
 
         </div>
-        {/* <h1> {note?.body}</h1> */}
-
-        {/* adding editable text area */}
-        {/* the value accepted the notes body and sets it to a textarea */}
-        {/* we added the onChange handle so we can update our notes  */}
-        {/* then we used the spread operator sayin update original note and stating 'body' as target for update  */}
+        
 
         <textarea onChange={(e) => {setNotes({...note, 'body': e.target.value})}} value={note?.body}>
 

@@ -59,7 +59,7 @@ getNotes()
     history.push('/ ')
   }
 
-  let handleDelete = async () =>{
+ let handleDelete = async () =>{
     await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`, {
       method: 'DELETE',
       headers:{
@@ -69,12 +69,6 @@ getNotes()
     })
     history.push('/')
   }
-    // the log shows us how the match parameter id can help us find individual notes and work on based off our url parameter 
-    // console.log(noteId)
-    // console.log('props:', props.match.params.id)
-    // variable of note, then loop through the note and map it to a note id
-    // a filter  
-    // let note = notes.find(note => note.id === Number(noteId))
   return (
     <div className='note'>
         <div className='note-header'>

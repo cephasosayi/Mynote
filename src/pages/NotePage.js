@@ -17,7 +17,7 @@ getNotes()
   let getNotes = async () =>{
     // setting a condition to stop other getNote request if we want to add a new note 
     if (noteId === 'new') return;
-    let response = await fetch(`https://my-json-server.typicode.com/cephasosayi/Mynote/notes/${noteId}`)
+    let response = await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`)
     let data = await response.json()
     setNotes(data)
   }
@@ -25,7 +25,7 @@ getNotes()
   // update method to enable saving 
 
   let updateNote = async () =>{
-      await fetch(`https://my-json-server.typicode.com/cephasosayi/Mynote/notes/${noteId}`, {
+      await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`, {
         method: 'PUT',
         headers:{
           'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ getNotes()
   
 
   let createNote = async () =>{
-    await fetch(`https://my-json-server.typicode.com/cephasosayi/Mynote/notes`, {
+    await fetch(`https://secure-garden-81676.herokuapp.com/notes`, {
       method: 'POST',
       headers:{
         'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ getNotes()
   }
 
   let handleDelete = async () =>{
-    await fetch(`https://my-json-server.typicode.com/cephasosayi/Mynote/notes/${noteId}`, {
+    await fetch(`https://secure-garden-81676.herokuapp.com/notes/${noteId}`, {
       method: 'DELETE',
       headers:{
         'Content-Type': 'application/json'
